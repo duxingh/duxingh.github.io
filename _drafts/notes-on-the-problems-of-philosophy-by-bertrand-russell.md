@@ -25,3 +25,7 @@ Let us adopt Descartes' idea. We can't be sure if a table exists, but we can be 
 From a purely practical standpoint, accepting the existence of matter is beneficial; the achievements of natural science prove this. However, this is still insufficient to convince those who refuse to accept the existence of matter, because they would argue that natural science is nothing more than sense-data transmitted to you by God.
 
 ## Chapter III. The Nature of Matter
+
+Natural science tries to reduce all phenomena into motion. Matter has no intrinsic property.
+
+## Chapter IV. Idealism
