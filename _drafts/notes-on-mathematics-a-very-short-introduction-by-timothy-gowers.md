@@ -5,6 +5,7 @@ category: Notes
 tags: [mathematics]
 media_subpath: /assets/img/posts/notes-on-mathematics-a-very-short-introduction-by-timothy-gowers
 image: cover.jpg
+math: true
 ---
 *Mathematics: A Very Short Introduction* (2002) by [Timothy Gowers](https://www.dpmms.cam.ac.uk/~wtg10/) aims to explain, carefully but not technically, the differences between advanced research-level mathematics and the sort of mathematics we learn at school. It is one of the books in Oxford's [Very Short Introductions](https://global.oup.com/academic/content/series/v/very-short-introductions-vsi/) series that offers concise and original introductions to a wide range of subjects.
 
@@ -27,6 +28,20 @@ A mathematical model is a simplified picture of a part of the real world, in whi
 In this section, the author shows us how to use probability as a model to predict the sum of points of a pair of dice. Probability is a good tool for solving some nondeterministic problems.
 
 ### Predicting population growth
+
+The population of a country in the $n$-th year can be modeled as
+
+$$
+P(n) = (1+b-d)P^n
+$$
+
+where $P$ is the current population, $b$ is the birth rate, and $d$ is the death rate.
+
+### Modelling brains and computers
+
+A computer can be modelled as a network of logic gates that transforms a 01-sequence into another one.
+
+## Chapter 2. Numbers and abstraction
 
 ## Further reading
 
