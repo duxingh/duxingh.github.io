@@ -31,3 +31,65 @@ Although we cannot represent an irrational point with a rational number, we can 
 {: .prompt-info }
 
 #### e. Inequalities
+
+Inequalities in mathematical analysis play important roles. Thus, the authors mention some important inequalities here.
+
+Triangle inequality:
+
+$$
+|a+b| \leq |a| + |b|
+$$
+
+By replacing $a = \alpha - \gamma$ and $b = \gamma - \beta$, we have
+
+$$
+|\alpha - \beta| \leq |\alpha - \gamma| + |\gamma - \beta|
+$$
+
+The geometrical interpretation of this inequality is that the direct distance from $\alpha$ to $\beta$ is less than or equal to the sum of distances via a third point $\gamma$.
+
+The Cauchy-Schwarz inequality:
+
+$$
+(\sum_{i=1}^{n} a_i b_i)^2 \leq (\sum_{i=1}^{n} a_i^2)(\sum_{i=1}^{n} b_i^2)
+$$
+
+Proof: We have $(a_i x + b_i)^2 \geq 0$ for every $a_i,b_i$ and real number $x$. Thus, we have
+
+$$
+\begin{gather*}
+\sum_{i=1}^{n} (a_i x + b_i)^2 \geq 0 \\
+\Downarrow \\
+(\sum_{i=1}^{n} a_i^2) x^2 + 2(\sum_{i=1}^{n} a_i b_i) x+ (\sum_{i=1}^{n} b_i^2) \geq 0
+\end{gather*}
+$$
+
+Let $A = \sum_{i=1}^{n} a_i^2$, $B = \sum_{i=1}^{n} b_i^2$, and $C = \sum_{i=1}^{n} a_i b_i$, we have
+
+$$
+A x^2 + 2 C x + B \geq 0
+$$
+
+The necessary condition for this inequality to hold for any real number $x$ is that $C^2 - AB \leq 0$. We can get the Cauchy-Schwarz inequality by expanding it. $\square$
+
+In the special case $n = 2$ and
+
+$$
+a_1 = \sqrt{x}, a_2 = \sqrt{y}, b_1 = \sqrt{y}, b_2 = \sqrt{x}
+$$
+
+the Cauchy-Schwarz inequality becomes to
+
+$$
+\begin{gather*}
+(2\sqrt{xy})^2 \leq (x+y)(x+y) \\
+\Downarrow \\
+\sqrt{xy} \leq \frac{x+y}{2}
+\end{gather*}
+$$
+
+This inequality states that the geometric mean $\sqrt{xy}$ of two positive numbers $x,y$ never exceeds their arithmetic mean $(x+y)/2$.
+
+![Figure 1.6](fig-1-6.jpg){: w="400" }
+
+### 1.2 The Concept of Function
