@@ -43,6 +43,20 @@ A computer can be modelled as a network of logic gates that transforms a 01-sequ
 
 ## Chapter 2. Numbers and abstraction
 
+### The abstract method
+
+The abstract method in mathematics can be captured in this slogan:
+
+> a mathematical object *is* what it *does*.
+
+It means that the nature of a mathematical object depends on its relationship to other objects.
+
+### The natural numbers
+
+To think of a number system abstractly means to think of it as tokens in a sort of game. The core is the rule, but not the numbers themselves.
+
+### Zero
+
 ## Further reading
 
 In this section, the author recommends some other books for further reading. Here I list some of them that I want to read:
