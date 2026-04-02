@@ -93,3 +93,64 @@ This inequality states that the geometric mean $\sqrt{xy}$ of two positive numbe
 ![Figure 1.6](fig-1-6.jpg){: w="400" }
 
 ### 1.2 The Concept of Function
+
+#### d. Continuity
+
+Intuitively, a function $f(x)$ is continuous at $x_0$ if there is no "gap" in $f(x)$ at $x_0$. In other words, $\|f(x)-f(x_0)\|$ could be arbitrarily small if $x$ is sufficiently close to $x_0$. In more precise terms, we can define the continuity of a function by the following statement:
+
+> The function $f(x)$ is continuous at a point $x_0$ of its domain if for every positive $\epsilon$ we can find a positive number $\delta$ such that
+>
+> $$
+> |f(x) - f(x_0)| < \epsilon
+> $$
+>
+> for all values $x$ in the domain of $f$ for which $\|x - x_0\| < \delta$.
+{: .prompt-info }
+
+Example: $f(x) = ax+b$ where $x \in (-\infty,+\infty)$.
+
+Suppose $\|x-x_0\| < \delta$, then we have
+
+$$
+|f(x) - f(x_0)| = |a(x-x_0)| = |a||x-x_0| < |a|\delta
+$$
+
+Thus, for any positive number $\epsilon$, if we choose $\delta = \epsilon/\|a\|$, we have $\|f(x) - f(x_0)\| < \epsilon$ for which $\|x-x_0\| < \delta$. Thus, $f(x)$ is continuous at any point $x_0$. $\square$
+
+Example: $f(x) = x^2$ where $x \in (-\infty,+\infty)$.
+
+Suppose $\|x-x_0\| < \delta$, then we have
+
+$$
+\begin{align*}
+|f(x) - f(x_0)| = |x^2 - x_0^2| &= |(x-x_0)((x-x_0)+2x_0)| \\
+& \leq |x - x_0|(|x-x_0|+2|x_0|) \\
+& < \delta^2 + 2|x_0|\delta
+\end{align*}
+$$
+
+Thus, for any positive number $\epsilon$, if we choose $\delta = -\|x_0\| + \sqrt{\|x_0\|^2+\epsilon}$, we have $\|f(x) - f(x_0)\| < \epsilon$ for which $\|x-x_0\| < \delta$. Thus, $f(x)$ is continuous at any point $x_0$. $\square$
+
+So the general way to show a function $f(x)$ is continuous at a point $x_0$ is to suppose $\|x-x_0\| < \delta$, and then to continuously enlarge $\|f(x)-f(x_0)\|$, finally we obtain a formula containing only $\delta$ and $x_0$. We then set this formula equal to $\epsilon$ and deduce $\delta=\delta(\epsilon,x_0)$.
+
+Usually, $\delta$ depends on not only $\epsilon$ but also $x_0$; if $\delta$ depends only on $\epsilon$, we call this function is *uniformly continuous* in its domain. Uniform continuity is a stronger condition than continuity. It describes the uniformity of change of a continuous function. A uniformly continuous function has a relatively uniform rate of change at every point in its domain, without still continuous but abrupt changes.
+
+From the above examples, we can see that $f(x)=ax+b$ is uniformly continuous, but $f(x)=x^2$ is not. However, if we limit the domain of $f(x)=x^2$ in an interval $[a,b]$, it's uniformly continuous since $\delta^2 + 2\|x_0\|\delta \leq \delta^2 + 2M\delta$, where $M = \max\\{\|a\|,\|b\|\\}$.
+
+A Lipschitz-continuous function $f(x)$ satisfies a condition
+
+$$
+|f(x_2) - f(x_1)| \leq L|x_2 - x_1|
+$$
+
+We can easily see that a Lipschitz-continuous function is uniformly continuous, and $\delta = \epsilon/L$.
+
+A Hölder-continuous function $f(x)$ satisfies a condition
+
+$$
+|f(x_2) - f(x_1)| \leq L|x_2 - x_1|^\alpha
+$$
+
+We can easily see that a Hölder-continuous function is uniformly continuous, and $\delta = (\epsilon/L)^{1/\alpha}$.
+
+#### e. The Intermediate Value Theorem. Inverse Functions
