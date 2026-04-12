@@ -28,4 +28,4 @@ From a purely practical standpoint, accepting the existence of matter is benefic
 
 Natural science tries to reduce all phenomena into motion. Matter has no intrinsic property.
 
-## Chapter IV. Idealism
+## Chapter V. Knowledge by Acquaintance and Knowledge by Description

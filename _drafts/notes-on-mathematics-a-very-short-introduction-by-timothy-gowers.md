@@ -57,6 +57,16 @@ To think of a number system abstractly means to think of it as tokens in a sort 
 
 ### Zero
 
+Historically, the concept of number zero developed later than that of positive integers. People thought it was difficult to accept the existence of something meaning void. However, if we think of it abstractly, the number $0$ is just a new token of this rule:
+
+> $0$ is an additive identity: $0 + a = a$ for any number $a$.
+
+### Negative numbers and fractions
+
+Similarly, we can continuelly extend the number system by introducing negative numbers that are additive inverses and fractions that are multiplicative inverses.
+
+### Real and complex numbers
+
 ## Further reading
 
 In this section, the author recommends some other books for further reading. Here I list some of them that I want to read:
