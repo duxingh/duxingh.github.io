@@ -60,3 +60,23 @@ $$
 $$
 
 ## Chapter 5. Time and Distance
+
+### 5–2 Time
+
+> What really matters anyway is not how we *define* time, but how we measure it.
+
+Time is the most basic concept, so we can't define it based on other more basic concepts.
+
+---
+
+> One way of measuring time is to utilize something which happens over and over again in a regular fashion—something which is *periodic*.
+
+How can we know that a periodic event is regular? We can't, but we can assume that it is regular. If we have two periodic events, we can always use one to measure the other one, and then we pick the one that seems more regular as the standard.
+
+### 5–3 Short times
+
+> What about still smaller times? Does “time” exist on a still smaller scale? Does it make any sense to speak of smaller times if we cannot measure—or perhaps even think sensibly about—something which happens in a shorter time?
+
+By the very definition of time, it is very hard to speak to the meaning of time in an extremely short duration when nothing happens. Can we really say that time is continuous? Maybe time is also quantumized.
+
+## Chapter 6. Probability
