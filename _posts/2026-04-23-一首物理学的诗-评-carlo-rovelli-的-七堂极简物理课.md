@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 一首物理学的诗——评 Carlo Rovelli 的《七堂极简物理课》
-lang: zh-Hans
+lang: zh-CN
 category: Reviews
 tags:
 - physics
