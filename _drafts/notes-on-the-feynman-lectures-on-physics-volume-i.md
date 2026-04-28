@@ -80,3 +80,56 @@ How can we know that a periodic event is regular? We can't, but we can assume th
 By the very definition of time, it is very hard to speak to the meaning of time in an extremely short duration when nothing happens. Can we really say that time is continuous? Maybe time is also quantumized.
 
 ## Chapter 6. Probability
+
+### 6–3 The random walk
+
+Consider a particle that can walk randomly forward and backward in each unit time, and the distance in each step is the same. Let $N$ be the number of steps and $D_N$ be the distance at the $N$ step. Obviously, the expected distance $\left< D_N \right>$ is zero. However, we are more interested in how far the particle has moved in $N$ steps, i.e., we want to calculate $\left< D_N^2 \right>$.
+
+If we know $D_{N-1}$, we have $D_N = D_{N-1} + 1$ or $D_N = D_{N-1} - 1$. Thus, we have
+
+$$
+D_N^2 = \begin{cases}
+    D_{N-1}^2 + 2D_{N-1} + 1 \\
+    D_{N-1}^2 - 2D_{N-1} + 1 \\
+\end{cases}
+$$
+
+Thus, we have $\left< D_N^2 \right> = \left< D_{N-1}^2 \right> + 1$. The solution is $\left< D_N^2 \right> = N$. We define the root-mean-square distance
+
+$$
+D_{rms} = \sqrt{\left< D_N^2 \right>} = \sqrt{N}
+$$
+
+It can be a measure of the “progress made away from the origin” in a random walk.
+
+---
+
+The random walk is related to the game of tossing a coin. If we imagine that the direction of each step is decided by the the appearance of head or tail in a coin toss, we have
+
+$$
+\begin{gather*}
+D_N = N_H - N_T = 2N_H - N \\
+\Downarrow \\
+N_H - \frac{N}{2} = \frac{D_N}{2}
+\end{gather*}
+$$
+
+$N_H - N/2$ is the *fluctuation*. Its rms value is
+
+$$
+(N_H - \frac{N}{2})_{rms} = \frac{\sqrt{N}}{2}
+$$
+
+The larger the $N$, the larger the rms fluctuation. However, if we consider the relative rms fluctuation:
+
+$$
+(N_H - \frac{N}{2})_{rms} / N = \frac{1}{2\sqrt{N}}
+$$
+
+It's tendency to zero.
+
+Now we are back to consider what it means we say the probability $P(H)$ of getting a head in a coin tossing is equal to $0.5$. It means that the experimental result of $N_H/N$ could not be exactly $0.5$, but the more we toss a coin, the smaller the "error".
+
+Probability is subjective. Lacking precise knowledge of an event, we assign it a numerical value. Based on this value, we construct a calculation process; the final result, within a certain margin of error, conforms to the statistical results of the experiment. This is a startling phenomenon: the subjective can describe the objective world. However, this is something humanity has always been doing; aren't geometric concepts like points, lines, and planes, and the concept of numbers, also forms of subjective imagination?
+
+## Chapter 7. The Theory of Gravitation
