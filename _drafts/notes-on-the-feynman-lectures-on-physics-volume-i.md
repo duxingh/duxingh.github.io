@@ -133,3 +133,13 @@ Now we are back to consider what it means we say the probability $P(H)$ of getti
 Probability is subjective. Lacking precise knowledge of an event, we assign it a numerical value. Based on this value, we construct a calculation process; the final result, within a certain margin of error, conforms to the statistical results of the experiment. This is a startling phenomenon: the subjective can describe the objective world. However, this is something humanity has always been doing; aren't geometric concepts like points, lines, and planes, and the concept of numbers, also forms of subjective imagination?
 
 ## Chapter 7. The Theory of Gravitation
+
+### 7–2 Kepler’s laws
+
+Kepler found three laws from Tycho's data:
+
+1. Each planet moves around the sun in an ellipse, with the sun at one focus.
+2. The radius vector from the sun to the planet sweeps out equal areas in equal intervals of time.
+3. The squares of the periods of any two planets are proportional to the cubes of the semimajor axes of their respective orbits: $T \propto a^{3/2}$.
+
+## Chapter 8. Motion
