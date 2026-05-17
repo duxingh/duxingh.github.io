@@ -53,3 +53,139 @@ Proof: Because $L$ is the set of all lower bounds of $B$, every member of $B$ is
 We have $\alpha \leq b$ for every $b \in B$ since $b$ is an upper bound of $L$ and $\alpha$ is the least upper bound of $L$. Thus, $\alpha$ is an lower bound of $B$. We have $l \leq \alpha$ for every $l \in L$ since $\alpha$ is an upper bound of $L$. Thus, $\alpha$ is the largest one of the lower bounds of $B$, i.e., $\alpha$ is the greatest lower bound of $B$. $\square$
 
 ### Fields
+
+> <strong id="def-1-12">1.12 Definition</strong> &emsp; A *field* is a set $F$ with two operations, called *addition* and *multiplication*, which satisfy the following so-called "field axioms" (A), (M), and (D):
+>
+> **(A) Axioms for addition**
+>
+> (A1) If $x \in F$ and $y \in F$, then their sum $x + y$ is in $F$.  
+> (A2) Addition is commutative: $x + y = y + x$ for all $x, y \in F$.  
+> (A3) Addition is associative: $(x + y) + z = x + (y + z)$ for all $x, y, z \in F$.  
+> (A4) $F$ contains an element $0$ such that $0 + x = x$ for every $x \in F$.  
+> (A5) To every $x \in F$ corresponds an element $-x \in F$ such that
+>
+> $$
+> x+(-x) = 0
+> $$
+>
+> **(M) Axioms for multiplication**
+>
+> (M1) If $x \in F$ and $y \in F$, then their product $xy$ is in $F$.  
+> (M2) Multiplication is commutative: $xy = yx$ for all $x, y \in F$.  
+> (M3) Multiplication is associative: $(xy)z = x(yz)$ for all $x, y, z \in F$.  
+> (M4) $F$ contains an element $1 \neq 0$: $0$ such that $1x = x$ for every $x \in F$.  
+> (M5) If $x \in F$ and $x \neq 0$ then there exists an element $1/x \in F$ such that
+>
+> $$
+> x \cdot (1/x) = 1
+> $$
+>
+> **(D) The distributive law**
+>
+> $$
+> x(y + z) = xy + xz
+> $$
+>
+> holds for all $x,y,z \in F$.
+{: .prompt-info }
+
+The rational number set $\mathbf{Q}$ is a field.
+
+> <strong id="proposition-1-14">1.14 Proposition</strong> &emsp; The axioms for addition imply the following statements.
+>
+> (a) If $x + y = x + z$ then $y = z$.  
+> (b) If $x + y = x$ then $y = 0$.  
+> (c) If $x + y = 0$ then $y = -x$.  
+> (d) $-(-x) = x$.
+{: .prompt-info }
+
+(a) is a cancellation law; (b) asserts that the addition unit is unique; (c) asserts that an addition inverse is unique.
+
+Proof: If $x + y = x + z$ holds, by axioms (A), we have
+
+$$
+\begin{gather*}
+(-x) + (x + y) = (-x) + (x + z) \\
+\Downarrow \\
+((-x)+x) + y = ((-x)+x) + z \\
+\Downarrow \\
+(x+(-x)) + y = (x+(-x)) + z \\
+\Downarrow \\
+0 + y = 0 + z \\
+\Downarrow \\
+y = z
+\end{gather*}
+$$
+
+This proves (a). Take $z = 0$ in (a) to obtain (b). Take $z = -x$ in (a) to obtain (c).
+
+Since $-x + x = 0$, by (c), we have $x = -(-x)$. This proves (d). $\square$
+
+> <strong id="proposition-1-15">1.15 Proposition</strong> &emsp; The axioms for multiplication imply the following statements.
+>
+> (a) If $x \neq 0$ and $xy = xz$ then $y = z$.  
+> (b) If $x \neq 0$ and $xy = x$ then $y = 1$.  
+> (c) If $x \neq 0$ and $xy = 1$ then $y = 1/x$.  
+> (d) If $x \neq 0$ then $1/(1/x) = x$.  
+{: .prompt-info }
+
+The proof is similar to that of Proposition 1.14.
+
+> <strong id="proposition-1-16">1.16 Proposition</strong> &emsp; The field axioms imply the following statements, for any $x, y, z \in F$.
+>
+> (a) $0x = 0$.  
+> (b) If $x \neq 0$ and $y \neq 0$ then $xy \neq 0$.  
+> (c) $(-x)y = -(xy) = x(-y)$.  
+> (d) $(-x)(-y) = xy$.
+{: .prompt-info }
+
+Proof: Since $x + 0x = 1x + 0x = (1+0)x = 1x = x$, by Proposition 1.14 (b), we have $0x = 0$. (a) holds.
+
+Assume $xy = 0$, then $x = x + 0 = x + xy = x(1+y)$; by Proposition 1.15 (b), we have $1+y = 1$. Thus, $y = 0$. Similarly, we can show that $x = 0$. This is contradictory to $x \neq 0$ and $y \neq 0$. This proves (b).
+
+Since
+
+$$
+xy + (-x)y = (x + (-x)) y = 0y = 0
+$$
+
+we have $(-x)y = -(xy)$. Similarly, we can show that $x(-y) = -(xy)$. (c) holds.
+
+Since
+
+$$
+-(xy) + (-x)(-y) = (-x)y + (-x)(-y) = (-x)(y + (-y)) = (-x) 0 = 0
+$$
+
+we have $(-x)(-y) = -(-(xy)) = xy$. (d) holds. $\square$
+
+Proposition 1.16 (a) shows why it asserts $1 \neq 0$ in (M4). If $1 = 0$, we have $1x = 0x = 0 = 1$ for any $x \in F$. It means that there is only one element in $F$. It's a boring set.
+
+> <strong id="def-1-17">1.17 Definition</strong> &emsp; An *ordered field* is a *field* $F$ which is also an *ordered set*, such that
+>
+> (i) $x+y < x+z$ if $x,y,z \in F$ and $y < z$,  
+> (ii) $xy > 0$ if $x \in F$, $y \in F$, $x > 0$, and $y > 0$.
+{: .prompt-info }
+
+The rational number set is an ordered field.
+
+> <strong id="proposition-1-18">1.18 Proposition</strong> &emsp; The following statements are true in every ordered field.
+>
+> (a) If $x > 0$ then $-x < 0$, and vice versa.  
+> (b) If $x > 0$ and $y < z$ then $xy < xz$.  
+> (c) If $x < 0$ and $y < z$ then $xy > xz$.  
+> (d) If $x \neq 0$ then $x^2 > 0$. In particular, $1 > 0$.  
+> (e) If $0 < x < y$ then $0 < 1/y < 1/x$.  
+{: .prompt-info }
+
+Proof: (a) Suppose $x > 0$. Since Definition 1.5 (i), we just need to prove that neither $-x = 0$ nor $-x > 0$. If $-x = 0$ then $x = 0$; it's contradictory to $x > 0$. If $-x > 0$ then $x + (-x) > x + 0$ since Definition 1.17 (i). It implies that $0 > x$; it's contradictory to $x > 0$. Thus, $-x < 0$.
+
+(b) $y < z$ implies that $0 < -y + z$ since Definition 1.17 (i). By Definition 1.17 (ii), we have $x(-y+z) > 0$. It implies that $-xy + xz > 0$, which implies that $xz > xy$.
+
+(c) Since $x < 0$, we have $-x > 0$ by (a). We have $(-x)y < (-x)z$ since (b). It implies that $-xy < -xz$. By adding $xy$ to both sides, we have $0 < xy + (-xz)$. By adding $xz$ to both sides, we have $xz < xy$.
+
+(d) Since $x \neq 0$, we have $x > 0$ or $x < 0$. If $x > 0$, we have $x^2 > 0$ since Definition 1.17 (ii). If $x < 0$, we have $-x > 0$ since (a). Thus, $(-x)(-x) > 0$ since Definition 1.17 (ii). By Proposition 1.16 (d), we have $x^2 = (-x)(-x) > 0$. In particuler, we have $1 > 0$ since $1^2 = 1$.
+
+(e) If $x > 0$ and $1/x < 0$, we have $1 = x (1/x) < 0$ since (b), but this result is contradictory to (d). Thus, $1/x > 0$. Similarly, we can show that $y > 0$ implies $1/y > 0$. If $x < y$, by multiplying $1/x$ to both sides, we get $1 < y (1/x)$; again, by multiplying $1/y$ to both sides, we get $1/y < 1/x$. $\square$
+
+### The Real Field
