@@ -189,3 +189,59 @@ Proof: (a) Suppose $x > 0$. Since Definition 1.5 (i), we just need to prove that
 (e) If $x > 0$ and $1/x < 0$, we have $1 = x (1/x) < 0$ since (b), but this result is contradictory to (d). Thus, $1/x > 0$. Similarly, we can show that $y > 0$ implies $1/y > 0$. If $x < y$, by multiplying $1/x$ to both sides, we get $1 < y (1/x)$; again, by multiplying $1/y$ to both sides, we get $1/y < 1/x$. $\square$
 
 ### The Real Field
+
+> <strong id="theorem-1-19">1.19 Theorem</strong> &emsp; There exists an ordered field $\mathbf{R}$ which has the least-upper-bound property.
+>
+> Moreover, $\mathbf{R}$ contains $\mathbf{Q}$ as a subfield.
+{: .prompt-info }
+
+To prove this theorem, we need to construct $\mathbf{R}$ based on $\mathbf{Q}$. The author puts this tedious work into the Appendix to chapter 1.
+
+> <strong id="theorem-1-20">1.20 Theorem</strong> &emsp; (a) If $x \in \mathbf{R}$, $y \in \mathbf{R}$, and $x > 0$, then there is a positive integer $n$ such that
+>
+> $$
+> nx > y
+> $$
+>
+> (b) If $x \in \mathbf{R}$, $y \in \mathbf{R}$, and $x < y$, then there exists a $p \in \mathbf{Q}$ such that $x < p < y$.
+{: .prompt-info }
+
+(a) is called the *archimedean property* of $\mathbf{R}$. In many other books, this is accepted as an axiom. (b) means rational numbers are dense in the real field.
+
+Proof: (a) Let $S$ be a set of all $nx$, and suppose that $nx \leq y$ holds for every positive integer $n$. Then $S$ is upper bounded. By the least-upper-bound property, there exists $z \in \mathbf{R}$ that is the least upper bound of $S$.
+
+By $x > 0$, we have $-x < 0$. By adding $z$ into the both sides, we have $z-x < z$, so that $z-x$ is not an upper bound of $S$. Thus, there exists an $nx$ such that $z-x < nx$. By adding $x$ into the both sides, we have $z < (n+1)x$. This is contradictory to the fact that $z$ is an upper bound of $S$ since $(n+1)x \in S$.
+
+This proves that there exists an $nx$ such that $nx > y$.
+
+(b) We have $y-x > 0$ since $x < y$. To find out a rational number $p$ between $x$ and $y$, we need to compare $x$ and $y$ to the unit length $1$. By (a), we know that there exists a positive integer $n$ such that $n(y-x) > 1$, i.e.,
+
+$$
+nx < ny - 1
+$$
+
+Again, by (a), there exists positive integers $m_1$ and $m_2$ such that $m_1 > nx$ and $m_2 > -nx$, i.e.,
+
+$$
+-m_2 < nx < m_1
+$$
+
+There is an integer $m$ such that
+
+$$
+m-1 \leq nx < m
+$$
+
+$nx < m$ implies $x < m/n$.
+
+$m-1 \leq nx$ and $nx < ny-1$ imply
+
+$$
+m-1 \leq nx < ny -1
+$$
+
+Thus, $m/n < y$. Letting $p = m/n$, (b) is proved. $\square$
+
+> <strong id="theorem-1-21">1.21 Theorem</strong> &emsp; For every real $x > 0$ and every integer $n > 0$ there is one
+and only one positive real $y$ such that $y^n = x$.
+{: .prompt-info }
