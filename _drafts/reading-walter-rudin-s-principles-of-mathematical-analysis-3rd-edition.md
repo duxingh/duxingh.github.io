@@ -245,3 +245,11 @@ Thus, $m/n < y$. Letting $p = m/n$, (b) is proved. $\square$
 > <strong id="theorem-1-21">1.21 Theorem</strong> &emsp; For every real $x > 0$ and every integer $n > 0$ there is one
 and only one positive real $y$ such that $y^n = x$.
 {: .prompt-info }
+
+Proof: If $x \geq 1$, let $S$ be a set of all positive real numbers $s$ satisfying $s^n < x$, then $S$ is upper bounded. There exists a least-upper bound $y$ of $S$. One and only one of the below three statements is true:
+
+$$
+y^n < x, y^n = x, y^n > x
+$$
+
+If $y^n < x$, $y \in S$. Thus, $y$ is the largest member of $S$. By Theorem 1.20 (b), we can choose a rational number $p$ such that $y^n < p < x$.
