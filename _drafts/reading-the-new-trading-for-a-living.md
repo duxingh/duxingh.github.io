@@ -5,6 +5,7 @@ category: Notes
 tags: [economy, finance, trading]
 media_subpath: /assets/img/posts/reading-the-new-trading-for-a-living
 image: cover.jpg
+math: true
 ---
 *The New Trading for a Living* (2014) by [Alexander Elder](https://www.elder.com/) is one of the most influential modern books on trading psychology and practical market strategy. It is essentially a complete guide for becoming a disciplined trader rather than just learning technical indicators.
 
@@ -120,3 +121,74 @@ I think these explaination is no longer true for the crypto market because the c
 ## Part 4. Computerized Technical Analysis
 
 ### 21. Computers in Trading
+
+#### Three Major Groups of Indicators
+
+- **Trend-following indicators**: They work best when markets are moving, but the quality of their signals sharply deteriorates when the markets go flat.
+  - Moving averages, MACD Lines, the Directional System, On-Balance Volume, Accumulation/Distribution, ...
+- **Oscillators**: They catch turning points in flat markets but give premature and dangerous signals when the markets begin to trend.
+  - MACD-Histogram, Force Index, Stochastic, Rate of Change, Momentum, the Relative Strength Index, Elder-ray, Williams %R, ...
+- **Miscellaneous indicators**: They provide insights into mass psychology.
+  - New High–New Low Index, the Put-Call Ratio, Bullish Consensus, Commitments of Traders, ...
+
+### 22. Moving Averages
+
+> Donchian was a Merrill Lynch employee who developed trading methods based on moving average crossovers. Hurst was an engineer who applied moving averages to stocks in his classic book, The Profit Magic of Stock Transaction Timing.
+
+#### Twice as Much Bark
+
+One of drawbacks of the simple MA is that it changes twice when a new piece of data comes in:
+
+> The bad thing is that MA changes again when an old price is dropped off at the end of its window. When a high price is dropped, a simple MA ticks down. When a low price is dropped, a simple MA rises. Those changes have nothing to do with the current reality of the market.
+
+#### Market Psychology
+
+> **A moving average represents an average consensus of value for the period of time in its window.**
+
+> The most important message of a moving average is the direction of its slope. When it rises, it shows that the crowd is becoming more optimistic—bullish. When it falls, it shows that the crowd is becoming more pessimistic—bearish. When prices rise above a moving average, the crowd is more bullish than before. When prices fall below a moving average, the crowd is more bearish than before.
+
+#### Exponential Moving Averages
+
+> An exponential moving average (EMA) is a better trend-following tool because it gives greater weight to the latest data and responds to changes faster than a simple MA. At the same time, an EMA doesn’t jump in response to dropping old data.
+
+$$
+\text{EMA} = P_{tod} \cdot K + \text{EMA}_{yest} \cdot (1 − K)
+$$
+
+where $K = \frac{2}{N+1}$.
+
+Let us rewrite the formula of simple MA:
+
+$$
+\begin{align*}
+\text{MA} &= \frac{P_1 + P_2 + \cdots P_N}{N} \\
+    &= P_N \cdot \frac{1}{N} + \frac{P_1 + P_2 + \cdots P_{N-1}}{N} \\
+    &= P_N \cdot \frac{1}{N} + \frac{P_0 + P_1 + P_2 + \cdots P_{N-1} - P_0}{N} \\
+    &= P_N \cdot \frac{1}{N} + \text{MA}_{yest} - \frac{P_0}{N} \\
+\end{align*}
+$$
+
+#### Trading Rules
+
+> 1. When an EMA rises, trade that market from the long side. Buy when prices dip near the moving average. Once you are long, place a protective stop below the latest minor low, and move it to the break-even point as soon as prices close higher.
+> 2. When the EMA falls, trade that market from the short side. Sell short when prices rally toward the EMA and place a protective stop above the latest minor high. Lower your stop to breakeven as prices drop.
+> 3. When the EMA goes flat and only wiggles a little, it identifies an aimless, trendless market. Do not trade using a trend-following method.
+
+The author doesn't like to trade based on MA crossings: Trying to filter out whipsaws with mechanical rules is self-defeating—filters reduce profits as much as losses.
+
+#### Prices, Values, and the Value Zone
+
+> Technical analysts can define values by tracking the spread between a fast and a slow EMA. One of these EMAs reflects a short-term and the other a long-term consensus of value. *Value lives in the zone between the two moving averages.*
+
+### 23. Moving Average Convergence-Divergence: MACD Lines and MACD-Histogram
+
+#### How to Create MACD
+
+> 1. Calculate a 12-day EMA of closing prices.
+> 2. Calculate a 26-day EMA of closing prices.
+> 3. Subtract the 26-day EMA from the 12-day EMA, and plot their difference as a solid line. This is the fast MACD line.
+> 4. Calculate a 9-day EMA of the fast line, and plot the result as a dashed line. This is the slow Signal line.
+
+#### Market Psychology
+
+> Crossovers of the MACD and Signal lines identify shifts in the balance of power of bulls and bears. The fast MACD line reflects mass consensus over a shorter time period. The slow Signal line reflects mass consensus over a longer period. When the fast MACD line rises above the slow Signal line, it shows that bulls dominate the market, and it is better to trade from the long side. When the fast line falls below the slow line, it shows that bears dominate the market and it pays to trade from the short side.
