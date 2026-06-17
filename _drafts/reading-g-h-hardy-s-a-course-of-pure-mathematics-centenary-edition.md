@@ -15,4 +15,4 @@ G. H. Hardy (1877–1947)'s *A Course of Pure Mathematics* is a classic textbook
 
 The author assumes that readers of this book are familiar with rational numbers.
 
-### 4. Irrational numbers (continued)
+### 8. Real numbers
