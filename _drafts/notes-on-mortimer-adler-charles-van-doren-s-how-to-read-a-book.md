@@ -53,3 +53,30 @@ Here are the authors' suggestions about how to do systematic skimming:
 Superficial reading is for reading a difficult book. It encourages reading through a book without stopping at any difficult point. After this process, you won't completely understand the book, but a half understanding is always better than no understanding.
 
 ### 5. How to Be a Demanding Reader
+
+#### The Essence of Active Reading: The Four Basic Questions a Reader Asks
+
+The authors suggest that we should bring the below four questions while reading:
+
+1. *What is the book about as a whole?*
+2. *What is being said in detail, and how?*
+3. *Is the book true, in whole or part?*
+4. *What of it?*
+
+#### The Three Kinds of Note-making
+
+The authors mention three kinds of note-taking, and each of them corresponds to a reading level:
+
+1. *Structural notes*: We take structural notes in inspectional reading; these notes concern the structure of the book.
+2. *Conceptual notes*: We take conceptual notes in analytical reading; these notes are a deep understanding of concepts introduced in the book.
+3. *Dialectical notes*: We take dialectical notes in syntopical reading since we are reading many different books at this level.
+
+## Part II. The Third Level of Reading: Analytical Reading
+
+### 6. Pigeonholing a Book
+
+#### The Importance of Classifying Books
+
+Classifying a book is not difficult work. You can almost immediately know its class from the title and the publisher's blurb.
+
+### 7. X-raying a Book
