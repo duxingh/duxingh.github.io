@@ -262,4 +262,131 @@ Thus, this formula holds for every positive integer $n$ by mathematical inductio
 
 ## Supplement to Chapter I. The Theory of Numbers
 
-### Introduction
+### &sect;1. The Prime Numbers
+
+> There are infinitely many prime numbers.
+{: .prompt-info }
+
+Proof: Suppose there are only finite many primes $p_1, p_2, \cdots, p_n$, then we form a number
+
+$$
+A = p_1 p_2 \cdots p_n + 1
+$$
+
+$A$ is larger than any prime $p_i$; thus, $A$ must be a composite number, i.e., there is at least one $p_i$ that is a factor of $A$. However, we can see that $A$ divided by any $p_i$ always leaves a remainder of $1$. This contradiction proves that there are infinitely many primes. $\square$.
+
+This proof was first given by Euclid.
+
+---
+
+The fundamental theorem of arithmetic:
+
+> Every integer $N$ greater than $1$ can be factored into a product of primes in only one way.
+{: .prompt-info }
+
+Proof: Suppose there are integers that can be factored into a product of primes at least in two ways, then there is a smallest one
+
+$$
+m = p_1 p_2 \cdots p_r = q_1 q_2 \cdots q_s \tag{S1.1.1}
+$$
+
+where $p_i,q_i$ are primes, and $p_1 \leq p_2 \leq \cdots \leq p_r$, $q_1 \leq q_2 \leq \cdots \leq q_s$.
+
+It's obvious that $p_1 \neq q_1$, otherwise we can delete them from (S1.1.1) to get a smaller integer that can be factored into a product of primes in two ways. Thus, we can assume $p_1 < q_1$.
+
+We form an integer
+
+$$
+m' = m - p_1 q_2 q_3 \cdots q_s
+$$
+
+Thus, we have
+
+$$
+\begin{align*}
+m' &= p_1 (p_2 p_3 \cdots p_r - q_2 q_3 \cdots q_s) \tag{S1.1.2} \\
+m' &= (q_1 - p_1) q_2 q_3 \cdots q_s \tag{S1.1.3} \\
+\end{align*}
+$$
+
+From (S1.1.2), we know that $p_1$ is a factor of $m'$.
+
+Then we introduce a proposition: *If a prime $p$ is a factor of the product of two integers $ab$, it is a factor of either $a$ or $b$.*
+
+By applying this proposition to (S1.1.3), we know that $p_1$ is a factor of either $q_1 - p_1$ or $q_2 q_3 \cdots q_s$. If $p_1$ is a factor of $q_2 q_3 \cdots q_s$, it means that $q_2 q_3 \cdots q_s$ can be decomposited into a different product of primes since $q_2 q_3 \cdots q_s$ doesn't contain $p_1$. Thus, $p_1$ is a factor of $q_1 - p_1$, i.e., there exists a positive integer $n$ such that
+
+$$
+q_1 - p_1 = n p_1 \Rightarrow q_1 = (n+1)p_1
+$$
+
+This is contradictory to that $q_1$ is a prime. This contradiction proves this theorem. $\square$
+
+Now we back to consider the proposition mentioned above:
+
+*If a prime $p$ is a factor of the product of two integers $ab$, it is a factor of either $a$ or $b$.*
+
+Proof: In fact, it is a corollary of the fundamental theorem of arithmetic. If $p$ were a factor of neither $a$ nor $b$, it wouldn't be appeared in the unique prime decompositions of $a$ and $b$. Thus, $p$ wouldn't be appeared in the unique prime decomposition of $ab$. However, there exists an integer $t$ such that $ab = pt$ since $p$ is a factor of $ab$. If we decomposite $t$ into a product of primes, we could see that $p$ appears in the unique prime decomposition of $ab$. This contradiction proves this proposition. $\square$
+
+How can we prove a theorem based on a proposition that is a corollary of the theorem? Is a circular logical reasoning? No. Actually, this proposition just need a condition that the prime decompositions of $a$ and $b$ are unique. In (S1.1.3), the prime decompositions of $q_1 - p_1$ and $q_2 q_3 \cdots q_s$ are unique since both of them are smaller than $m$.
+
+---
+
+Fermat made a conjecture that all numbers of the form
+
+$$
+F(n) = 2^{2^n} + 1
+$$
+
+are primes.
+
+For $n=1,2,3,4$, $F(n)$ is prime. But in 1732, Euler discovered that
+
+$$
+F(5) = 641 \cdot 6700417
+$$
+
+---
+
+Lejeune Dirichlet (1805–1859) proved that there are infinite many primes in any arithmetical progression $a+nd$ where $a$ and $d$ have no common factors. His proof applies the most advanced tools of calculus and function theory, and it's difficult to grasp.
+
+However, the authors showed us the proof of two special cases $4n+3$ and $6n+5$. The method is a generalization of Euclid's proof of the inifinitude of primes.
+
+Proof of $4n+3$: Suppose there are only finite many primes $p_1, p_2, \cdots, p_r$ of the form $4n+3$. We construct an integer
+
+$$
+A = 4 p_1 p_2 \cdots p_r - 1 = 4(p_1 p_2 \cdots p_r - 1) + 3
+$$
+
+$A$ is the form of $4n+3$.
+
+We notice that any primes greater than $2$ is the form of either $4n+1$ or $4n+3$, and the product of any two integers of the form $4n+1$ is still the form of $4n+1$. Thus, $A$ contains at least one prime factor of the form $4n+3$. However, we can see that $A$ divided by any $p_i$ leaves a remainder $-1$. Thus, there exists a prime factor of the form $4n+3$ that is greater than any $p_i$. This is contradictory to the assumption. $\square$
+
+Proof of $6n+5$: Suppose there are only finite many primes $p_1, p_2, \cdots, p_r$ of the form $6n+5$. We construct an integer
+
+$$
+A = 6 p_1 p_2 \cdots p_r - 1 = 6(p_1 p_2 \cdots p_r - 1) + 5
+$$
+
+$A$ is the form of $6n+5$.
+
+We notice that any primes greater than $3$ is the form of either $6n+1$ or $6n+5$, and the product of any two integers of the form $6n+1$ is still the form of $6n+1$. Thus, $A$ contains at least one prime factor of the form $6n+5$. However, we can see that $A$ divided by any $p_i$ leaves a remainder $-1$. Thus, there exists a prime factor of the form $6n+5$ that is greater than any $p_i$. This is contradictory to the assumption. $\square$
+
+We can't continue this proof pattern for the case of $8n+7$ because any prime greater than $5$ has four possible forms $8n+1$, $8n+3$, $8n+5$ and $8n+7$.
+
+---
+
+Let $A_n$ be the number of primes among integers $1,2,\cdots,n$. Gauss made a conjecture that
+
+$$
+\frac{A_n}{n} \sim \frac{1}{\ln n}
+$$
+
+It means
+
+$$
+\lim_{n \to \infty} \frac{A_n \ln n}{n}  = 1
+$$
+
+Hadamard and Poussin independently gave a rigorous proof of this so-called prime number theorem in 1896.
+
+### &sect;2. Congruences
