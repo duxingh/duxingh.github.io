@@ -14,4 +14,8 @@ image: cover.jpg
 
 Simplicity is the first principle. But what level of simplicity should we reach? Should we delete all adverbs and use basic grammar?
 
-### 3. Clutter
+### 5. The Audience
+
+Write for yourself. Do not visualize the mass audience.
+
+### 7. Usage

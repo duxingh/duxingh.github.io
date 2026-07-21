@@ -91,3 +91,15 @@ On the first stage of analytical reading, the authors suggest doing these four t
 > 4. Define the problem or problems the author is trying to solve.
 
 ### 8. Coming to Terms with an Author
+
+#### Words vs. Terms
+
+A term is an unambiguous word.
+
+---
+
+The fifth rule of analytical reading:
+
+> You must spot the important words in a book and figure out how the author is using them.
+
+### 9. Determining an Author's Message
